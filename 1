@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    long long int t, i, j, l, m, z, r, q, a1, a2;
+    cin  >> t;
+    long long int a[t], b[t], x[t];
+    for(i=0;i<t;i++){
+        cin >> a[i] >> b[i] >> x[i];
+    }
+    for(i=0;i<t;i++){
+        l = a[i];
+        m = b[i];
+        z = x[i];
+        r = l^m%z;
+        q = l^m/z;
+        cout << "q =  "  << q << endl;
+        a1= z*q;
+        a2= z*(q+1);
+        if(l^m-a1<=a2){
+            cout << a1 << endl;
+        }
+        else{
+             cout << a2 << endl;
+        }
+    }
+    return 0;
+}
